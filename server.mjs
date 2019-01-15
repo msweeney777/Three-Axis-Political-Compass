@@ -1,12 +1,12 @@
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
-const home = require('./api/home.mjs');
-const contact = require('./api/contact.mjs');
+import home from './app/index.mjs';
+import contact from './app/views/contact.mjs';
 
 app.get('/', home);
-app.get('/api/contact', contact);
+app.get('/contact', contact);
 
 
 app.listen(3000, () => {
